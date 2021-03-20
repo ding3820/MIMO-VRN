@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Rescaling Networks with Joint Optimization Strategies for Downscaling and Upscaling (CVPR 2021)</title>
+    <script type="text/javascript" src="web/latexit.js"></script>
+    <script type="text/javascript">
+    LatexIT.add('p',true);
+    </script>
+
+    <!-- CSS includes -->
+    <link href="web/bootstrap.css" rel="stylesheet">
+    <link href="web/css.css" rel="stylesheet" type="text/css">
+    <link href="web/mystyle.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div id="header" class="container-fluid">
+        <div class="row">
+            <h1>Video Rescaling Networks with Joint Optimization Strategies for Downscaling and Upscaling</h1>
+            <div class="authors">
+                <a href="https://www.linkedin.com/in/hyancheng96" target="_blank">Yan-Cheng Huang</a>, 
+                <a href="", target="_blank">Yi-Hsin Chen</a>, 
+                <a href="", target="_blank">Cheng-You Lu</a>, 
+                <a href="https://sites.google.com/g2.nctu.edu.tw/wpeng/cv", target="_blank">Wen-Hsiao Peng</a>, 
+                <a href="", target="_blank">Ching-Chun Huang</a>
+            </div>
+        </div>
+    
+        <p style="text-align:center;">
+            <a href="https://www.nctu.edu.tw/en" target="_blank"><img src="web/NCTU_logo.png" height="100"></a>   
+            <a href="http://mapl.nctu.edu.tw/" target="_blank"><img src="web/mapl_logo.png"  height="100"></a>
+        </p>
+    </div>
+    <div class="container" id="abstractdiv">
+        <h2>Abstract</h2>
+            <p>This paper addresses the video rescaling task, which arises from the needs of adapting the video spatial resolution to suit individual viewing devices. We aim to jointly optimize video downscaling and upscaling as a combined task. Most recent studies focus on image-based solutions, which do not consider temporal information. We present two joint optimization approaches based on invertible neural networks with coupling layers. Our Long Short-Term Memory Video Rescaling Network (LSTM-VRN) leverages temporal information in the low-resolution video to form an explicit prediction of the missing high-frequency information for upscaling. Our Multi-input Multi-output Video Rescaling Network (MIMO-VRN) proposes a new strategy for downscaling and upscaling a group of video frames simultaneously. Not only do they outperform the image-based invertible model in terms of quantitative and qualitative results, but they also show much improved upscaling quality than the traditional video rescaling without joint optimization. To our best knowledge, this work is the first attempt at the joint optimization of video downscaling and upscaling. </p>
+    </div>
+    <div class="container" id="intro_video">
+        <h2>Introduction Video</h2>
+            <p style="text-align:center;">
+                <iframe width="966" height="543" src="" frameborder="0" allowfullscreen></iframe>
+            </p>
+    </div>
+    
+
+    <div class="container" id="paperdiv">
+        <h2>CVPR 2021 Paper</h2>
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-3">
+                <a href="https://github.com/ding3820/MIMO-VRN" target="_blank"><p style="text-align: center;">
+                <img src="web/icon/github_icon.png">
+                <br/>
+                Code (Github)
+            </p></a></div>
+            <div class="col-sm-3">
+                <a href="" target="_blank"><p style="text-align: center;">
+                <img src="web/icon/pdf_icon.png" height="120">
+                <br/>
+                Paper (arXiv)
+            </p></a></div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+        <a href="" target="_blank">
+            <div class="thumbs">
+            </div>
+        </a>
+        <div>
+            <pre class="citation"></pre>
+        </div>
+    </div>
+
+    <div class="container" id="method">
+        <h2>Method</h2>
+        <p style="text-align:center;">
+            <img src="web/arch.png" height="480">
+        </p>
+        <br>
+        <p>
+            Overview of the proposed LSTM-VRN and MIMO-VRN for video rescaling. Both schemes involve an invertible network with coupling layers for video downscaling and upscaling. In part (a), LSTM-VRN downscales every video frame $x_t$ independently and forms a prediction $\hat{z}_t$ of the high-frequency component $z_t$ from the LR video frames $\{\hat{y}_i\}_{i=t-L}^{t+L}$ by a bi-directional LSTM that operates in a sliding window manner. In part (b), MIMO-VRN downscales a group of HR video frames $\{x_i\}_{i=t}^{t+g}$ into the LR video frames $\{\hat{y}_i\}_{i=t}^{t+g}$ simultaneously. The upscaling is also done on a group-by-group basis, with the high-frequency components $\{z_i\}_{i=t}^{t+g}$ estimated from the $\{\hat{y}_i\}_{i=t}^{t+g}$ by a predictive module.</p>
+    </div>
+
+    <div class="container" id="exp_results">
+    <h2>Experimental Results (Vid4)</h2>
+    <a href="http://mapl.nctu.edu.tw/MIMO_VRN" target="_blank"><h3>Video Results</h3></a>
+    
+    <div id="comparison_source">
+      <div class="col-md-6">
+        <h3 style="text-align:center;"></h3>
+      </div>
+      <div class="col-md-6">
+        <h3 style="text-align:center;"></h3>
+      </div>
+    </div>
+    <div class="col-md-12"><hr></div>
+    <div id="comparison_tsai">
+      <div class="col-md-6">
+        <h3 style="text-align:center;"></h3>
+
+      </div>
+      <div class="col-md-6">
+        <h3 style="text-align:center;"></h3>
+
+      </div>
+    </div>
+
+    </div>
+
+    <div id=footer><br></div>
+    <!-- Javascript includes -->
+    <script src="web/jquery-1.js"></script>
+    <script src="web/bootstrap.js"></script>
+  
+
+</body></html>
