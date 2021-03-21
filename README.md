@@ -20,8 +20,8 @@ For more detail, please refer to [BasicSR](https://github.com/xinntao/BasicSR).
 ## Usage
 Pretrained weight can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1hlQ8nHSJysqZ6h5vyPz-HApyTD_an7Xb?usp=sharing).
 
-All the implementation are in `/codes`. To run the code, 
-select the corresponding configuration file in `/codes/options/` and run as follow (MIMO-VRN for example):
+All the implementation is in `/codes`. To run the code, 
+select the corresponding configuration file in `/codes/options/` and run as following command (MIMO-VRN for example):
 #### Training
 ```
 python train.py -opt options/train/train_MIMO-VRN.yml
