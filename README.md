@@ -3,7 +3,7 @@ Pytorch Implementation of the paper "Video Rescaling Networks with Joint Optimiz
 
 Project Page: [Link](https://ding3820.github.io/MIMO-VRN/)
 
-Paper: [Link](https://ding3820.github.io/MIMO-VRN/)
+Paper: [To be uploaded]()
 
 
 ## Prerequisite
@@ -50,6 +50,7 @@ python test.py -opt options/test/test_MIMO-VRN.yml
 
 ## Citation
 ```
+to be provided
 ```
 ## Acknowledgement
 Our project is heavily based on [Invertible-Image-Rescaling](https://github.com/pkuxmq/Invertible-Image-Rescaling) and they adopt [BasicSR](https://github.com/xinntao/BasicSR) as basic framework.
