@@ -23,7 +23,7 @@
             <h1>Video Rescaling Networks<br>with Joint Optimization Strategies for Downscaling and Upscaling</h1>
             <div class="authors">
                 <a href="https://www.linkedin.com/in/hyancheng96" target="_blank">Yan-Cheng Huang</a>, 
-                <a href="", target="_blank">Yi-Hsin Chen</a>, 
+                <a href="mailto:yhchen12101@gmail.com", target="_blank">Yi-Hsin Chen</a>, 
                 <a href="https://johnnylu305.github.io", target="_blank">Cheng-You Lu</a>, 
                 <a href="https://a514514772.github.io", target="_blank">Hui-Po Wang</a>, 
                 <a href="https://sites.google.com/g2.nctu.edu.tw/wpeng/cv", target="_blank">Wen-Hsiao Peng</a>, 
@@ -39,7 +39,7 @@
     </div>
     <div class="container" id="abstractdiv">
         <h2>Abstract</h2>
-            <p>This paper addresses the video rescaling task, which arises from the needs of adapting the video spatial resolution to suit individual viewing devices. We aim to jointly optimize video downscaling and upscaling as a combined task. Most recent studies focus on image-based solutions, which do not consider temporal information. We present two joint optimization approaches based on invertible neural networks with coupling layers. Our Long Short-Term Memory Video Rescaling Network (LSTM-VRN) leverages temporal information in the low-resolution video to form an explicit prediction of the missing high-frequency information for upscaling. Our Multi-input Multi-output Video Rescaling Network (MIMO-VRN) proposes a new strategy for downscaling and upscaling a group of video frames simultaneously. Not only do they outperform the image-based invertible model in terms of quantitative and qualitative results, but they also show much improved upscaling quality than the traditional video rescaling without joint optimization. To our best knowledge, this work is the first attempt at the joint optimization of video downscaling and upscaling. </p>
+            <p>This paper addresses the video rescaling task, which arises from the needs of adapting the video spatial resolution to suit individual viewing devices. We aim to jointly optimize video downscaling and upscaling as a combined task. Most recent studies focus on image-based solutions, which do not consider temporal information. We present two joint optimization approaches based on invertible neural networks with coupling layers. Our Long Short-Term Memory Video Rescaling Network (LSTM-VRN) leverages temporal information in the low-resolution video to form an explicit prediction of the missing high-frequency information for upscaling. Our Multi-input Multi-output Video Rescaling Network (MIMO-VRN) proposes a new strategy for downscaling and upscaling a group of video frames simultaneously. Not only do they outperform the image-based invertible model in terms of quantitative and qualitative results, but also show much improved upscaling quality than the video rescaling methods without joint optimization. To our best knowledge, this work is the first attempt at the joint optimization of video downscaling and upscaling.  </p>
     </div>
     <div class="container" id="intro_video">
         <h2>Introduction Video</h2>
@@ -141,6 +141,13 @@
     <div id="comparison_source">
         <div class="row" style="text-align: center;">
             <img src="web/pic/lr.png" width="900">
+        </div>
+        </br>
+        <div class="row">
+            <p>We still can see the unpleasing artifacts in some of the downscaled LR results especially those produced by SISO downscaling method such as <I>IRN</I> and <I>LSTM-VRN</I>. However, MIMO-VRN can reduce much such artifacts since it utilizes temporal information while downscaling. The other way of reducing such artifacts is to increase the lambda factor in loss function which makes LR video much close to bicubic-downscaled one with a slight decrease in HR reconstrution quality. If the LR quality really bothers you, we suggest training the model with higher lambda factor.</p>
+        </div>
+        <div class="row" style="text-align: center;">    
+            <img src="web/pic/lambda.png" width="400">
         </div>
     </div>
 
