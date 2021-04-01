@@ -3,7 +3,7 @@ Pytorch Implementation of the paper "Video Rescaling Networks with Joint Optimiz
 
 Project Page: [Link](https://ding3820.github.io/MIMO-VRN/)
 
-Paper(arXiv): [Link](https://arxiv.org/abs/2103.14858)
+Paper (arXiv): [Link](https://arxiv.org/abs/2103.14858)
 
 
 ## Prerequisite
