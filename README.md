@@ -50,7 +50,14 @@ python test.py -opt options/test/test_MIMO-VRN.yml
 
 ## Citation
 ```
-to be provided
+@InProceedings{Huang_2021_CVPR,
+    author    = {Huang, Yan-Cheng and Chen, Yi-Hsin and Lu, Cheng-You and Wang, Hui-Po and Peng, Wen-Hsiao and Huang, Ching-Chun},
+    title     = {Video Rescaling Networks With Joint Optimization Strategies for Downscaling and Upscaling},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {3527-3536}
+}
 ```
 ## Acknowledgement
 Our project is heavily based on [Invertible-Image-Rescaling](https://github.com/pkuxmq/Invertible-Image-Rescaling) and they adopt [BasicSR](https://github.com/xinntao/BasicSR) as basic framework.
