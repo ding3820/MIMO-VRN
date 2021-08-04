@@ -205,10 +205,12 @@ def vimeo90k(mode):
                 keys.append('{}_{}_{}'.format(folder, sub_folder, j + 1))
     all_img_list = sorted(all_img_list)
     keys = sorted(keys)
-    if mode == 'GT':  # only read the 4th frame for the GT mode
-        print('Only keep the 4th frame.')
-        all_img_list = [v for v in all_img_list if v.endswith('im4.png')]
-        keys = [v for v in keys if v.endswith('_4')]
+
+    # This is only for super resolution
+    # if mode == 'GT':  # only read the 4th frame for the GT mode
+    #     print('Only keep the 4th frame.')
+    #     all_img_list = [v for v in all_img_list if v.endswith('im4.png')]
+    #     keys = [v for v in keys if v.endswith('_4')]
 
     if read_all_imgs:
         #### read all images to memory (multiprocessing)
